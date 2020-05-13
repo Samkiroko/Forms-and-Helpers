@@ -1,7 +1,7 @@
 # frozen_string_literal: true
+
 # rubocop:disable Style/ClassAndModuleChildren
 # rubocop:disable Layout/LineLength
-
 
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
