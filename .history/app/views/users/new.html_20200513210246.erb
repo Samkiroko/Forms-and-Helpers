@@ -15,8 +15,8 @@
 'password' %> <%= password_field_tag 'user[password]'%> <%= submit_tag %> <% end
 %> -->
 
-<%= form_for @user, url: {action: "create"} do |f| %> <%= f.label :username,
-"your username" %> <%= f.text_field :username, placeholder: 'Type your name
-here' %> <%= f.label :email %> <%= f.email_field :email, placeholder:
-'johndoe@example.com' %> <%= f.label :password %> <%= f.password_field :password
-%> <%= f.submit "create" %> <% end %>
+<%= form_for @user do |f| %> <%= f.label :username, "your username" %> <%=
+f.text_field :username, value: 'Type your name here' %> <%= f.label :email %>
+<%= f.email_field :email, placeholder: 'johndoe@example.com' %> <%= f.label
+:password %> <%= f.password_field :password %> <%= f.submit "create" %> <% end
+%>

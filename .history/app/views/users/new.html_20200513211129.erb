@@ -18,5 +18,5 @@
 <%= form_for @user, url: {action: "create"} do |f| %> <%= f.label :username,
 "your username" %> <%= f.text_field :username, placeholder: 'Type your name
 here' %> <%= f.label :email %> <%= f.email_field :email, placeholder:
-'johndoe@example.com' %> <%= f.label :password %> <%= f.password_field :password
-%> <%= f.submit "create" %> <% end %>
+'johndoe@example.com' %> <%= f.label :password %> <%= f.password_field
+:password, password: '*******' %> <%= f.submit "create" %> <% end %>
