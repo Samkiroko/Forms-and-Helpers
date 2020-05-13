@@ -1,0 +1,21 @@
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user, url: {action: "update"} do |f| %> 
+  <%= f.label :username, "your username" %>
+  <%= f.text_field :username, placeholder: 'Type your name here' %>
+  <%= f.label :email %> 
+  <%= f.email_field :email, placeholder: 'johndoe@example.com' %>
+  <%= f.label :password %> 
+  <%= f.password_field :password %>
+  <%= f.submit "update" %>
+<% end %>
