@@ -1,27 +1,17 @@
 AllCops:
+  EnabledByDefault: true
   Exclude:
-    - "db/**/*"
-    - "bin/*"
-    - "config/**/*"
+    - "README.md"
     - "Guardfile"
     - "Rakefile"
-    - "README.md"
-    - "node_modules/**/*"
-    - "Gemfile"
 
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 150
+  Max: 120
 Metrics/MethodLength:
-  Include:
-    - "app/controllers/*"
-    - "app/models/*"
   Max: 20
 Metrics/AbcSize:
-  Include:
-    - "app/controllers/*"
-    - "app/models/*"
   Max: 50
 Metrics/ClassLength:
   Max: 150
@@ -39,8 +29,16 @@ Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
   Enabled: false
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+Style/Copyright:
+  Enabled: false
+Style/DocumentationMethod:
+  Enabled: false
+Style/MissingElse:
+  Enabled: false
 Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -49,3 +47,6 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
+
+Lint/NumberConversion:
+  Enabled: false
